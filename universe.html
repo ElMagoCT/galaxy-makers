@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create a Universe | Galaxy Makers</title>
+<meta name="description" content="Choose how much dark matter, black-hole power and massive stars your universe has, then watch the simulation.">
+<link rel="icon" type="image/png" href="static/logo_dm.png">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="universe">
+<header class="wrap masthead">
+  <a class="brand" href="index.html"><img src="static/logo_white.png" alt="Galaxy Makers" width="420" height="190"></a>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="holograms.html">Holograms</a>
+    <a href="credits.html">Credits</a>
+  </nav>
+</header>
+<main class="wrap">
+
+<div id="makerwrap">
+<h1 class="sectitle">Create a Universe</h1>
+<p class="lead">Here you can create a Universe. Simply put in the parameters you want below and watch the computer get to work!</p>
+<form id="maker">
+<div class="maker">
+<div><h2>Dark Matter</h2><div class="card"><p>The amount of dark matter in your universe is key. Dark matter is what allows galaxies to form. Without it, there is not enough gravitational force on the gas to keep it from separating.</p>
+<div class="knob"><input type="range" name="dm" min="0" max="100" value="75" style="accent-color:#7E317B"><output for="dm">75</output></div></div></div>
+<div><h2>AGN Feedback</h2><div class="card"><p>This one can be a little tricky. At the centre of galaxies, there is a supermassive black hole. When gas falls onto this hole, it heats up to a very high temperature. This setting decides how much of that hot gas is thrown back out into the galaxy when this happens.</p>
+<div class="agn">
+<input type="radio" name="agn" value="1" id="agn1" checked><label for="agn1">Low</label>
+<input type="radio" name="agn" value="2" id="agn2"><label for="agn2">Medium</label>
+<input type="radio" name="agn" value="3" id="agn3"><label for="agn3">High</label>
+</div></div></div>
+</div>
+<div class="maker three">
+<div><h2>Low Mass Stars</h2><div class="card"><p>Low mass stars have very long lifetimes. They hang around forever and don't really do anything interesting.</p>
+<div class="knob"><input type="range" name="low" min="0" max="100" value="75" style="accent-color:#b8b230"><output for="low">75</output></div></div></div><div><h2>Medium Mass Stars</h2><div class="card"><p>Medium mass stars, like the Sun, have medium lifetimes and make up a reasonable amount of the stellar population.</p>
+<div class="knob"><input type="range" name="medium" min="0" max="100" value="75" style="accent-color:#AA2B4A"><output for="medium">75</output></div></div></div><div><h2>High Mass Stars</h2><div class="card"><p>High mass stars have a very short lifetime. They burn all of their fuel really quickly and then explode in a supernova! Too many of these and your galaxies will blow themselves apart.</p>
+<div class="knob"><input type="range" name="high" min="0" max="100" value="75" style="accent-color:#006388"><output for="high">75</output></div></div></div>
+</div>
+<div class="btnrow" style="margin-top:1.5rem">
+  <button type="submit" class="btn big">Simulate!</button>
+  <button type="button" class="btn big ghost" id="randomize" style="flex:0 1 14rem;background:var(--paper)">Random settings</button>
+</div>
+</form>
+</div>
+<div id="result" class="hidden"></div>
+<p class="btnrow" id="againrow"><button type="button" class="btn ghost hidden" id="again" style="background:var(--paper);flex:0 1 auto">&larr; Make another universe</button></p>
+</main>
+<footer><div class="wrap">
+  <img src="static/instlogos/durham.png" alt="Durham University"><img src="static/instlogos/icc.png" alt="Institute for Computational Cosmology"><img src="static/instlogos/leiden.png" alt="Leiden University"><img src="static/instlogos/erc.png" alt="European Research Council"><img src="static/instlogos/eu.png" alt="European Union">
+  <p>Galaxy Makers is an outreach project of the Institute for Computational Cosmology, Durham University. This is a fast, static rebuild of <a href="https://www.galaxymakers.org/" target="_blank" rel="noopener">galaxymakers.org</a>; all simulations, movies and text are theirs.</p>
+</div></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
